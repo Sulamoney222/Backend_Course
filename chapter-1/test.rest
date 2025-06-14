@@ -1,0 +1,21 @@
+
+//Test GET / WEBSITE
+
+GET http//localhost:5674
+
+//Test GET /location WEBSITE
+
+GET http//localhost:5674/location
+
+//DATA Endpoint
+
+GET http//localhost:5674/api/data
+
+
+//Data ENDPOINT FOR ADDING A USER
+POST http//localhost:5674/api/data HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Atanda Ayobami"
+}
