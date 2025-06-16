@@ -1,2 +1,10 @@
 ### GET to root
 GET http://localhost:5000/ HTTP/1.1
+
+###GET TO REGISTER
+POST http://localhost:5000/auth/register HTTP/1.1
+content-type:application/json
+{
+    "username": "fff",
+    "password": "sksjhjj3"
+}

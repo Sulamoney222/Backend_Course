@@ -8,7 +8,10 @@ const router = express.Router()
 
 //Register auth
 router.post('/register', (req, res)=>{
- console.log('register Page');
+ const {username,password} = req.body
+ console.log(username,password);
+ res.sendStatus(201)
+ 
  
 })
 
