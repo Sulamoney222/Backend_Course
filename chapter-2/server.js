@@ -9,7 +9,6 @@ const PORT = process.env.PORT || 5000
 const __filename = fileURLToPath(import.meta.url)
 
 //getting the current directory of our file
-
 const __dirname = dirname(__filename)
 
 //tells express to serve all files from the public folder as static assests
