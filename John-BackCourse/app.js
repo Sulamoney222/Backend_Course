@@ -1,4 +1,4 @@
-const { log } = require('console')
+
 const {readFile,writeFile} = require('fs')
 const util = require('util')
 
@@ -14,7 +14,7 @@ const start = async ()=>{
     const first = await readFilePromise( './texts/first.txt', 'utf8')
     const second = await readFilePromise( './texts/third.txt', 'utf8')
     console.log(first, second,
-        writeFilePromise('./texts/fourth.txt', 'What is happening in the fourth page')
+    await writeFilePromise('./texts/fourth.txt', 'What is happening in the fourth page')
     )
     
     } catch (error) {
