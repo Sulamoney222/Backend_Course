@@ -1,0 +1,42 @@
+async function example() {
+  console.log('1');
+
+  await Promise.resolve(); // ← microtask
+
+  setTimeout(() => console.log('4'), 0); // ← macrotask
+
+  console.log('2');
+}
+
+example();
+console.log('3');
+
+
+1
+3
+2
+4
+
+
+setTimeout(() => console.log('setTimeout'), 0);
+setImmediate(() => console.log('setImmediate'));
+process.nextTick(() => console.log('nextTick'));
+Promise.resolve().then(() => console.log('promise'));
+
+
+nextTick
+promise
+setTimeout
+setImmediate
+
+
+console.log('Hello World');
+console.log(1);
+setTimeout(() => {
+    console.log(2);
+    
+}, 0);
+Promise.resolve().then(() => console.log(3));
+
+console.log(4);
+
