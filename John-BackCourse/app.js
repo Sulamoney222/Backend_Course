@@ -1,3 +1,3 @@
-const 
+const {readFile,writeFile} = require('fs')
 
 
