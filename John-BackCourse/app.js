@@ -22,6 +22,13 @@ console.log('What is my name? ');
 
 const server = https.createServer()
 
+server.on('connect', ()=>{
+    console.log('This is HTTP lesson');
+    
+})
+
+server.listen(5000)
+
 const start = async ()=>{
     try {
     const first = await readFilePromise( './texts/first.txt', 'utf8')
