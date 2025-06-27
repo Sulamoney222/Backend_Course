@@ -7,7 +7,7 @@ const Emmiter = require('events')
 const readFilePromise = util.promisify(readFile)
 const writeFilePromise = util.promisify(writeFile)
 
-const 
+const customEmittter
 
 
 
