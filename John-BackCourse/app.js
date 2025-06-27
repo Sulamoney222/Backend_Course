@@ -9,6 +9,13 @@ const writeFilePromise = util.promisify(writeFile)
 
 const customEmittter = new Emmiter()
 
+customEmittter.on('process', ()=>{
+    console.log('Hello This is new Events');
+    
+})
+
+customEmittter.emit()
+
 
 
 console.log('What is my name? '); 
