@@ -20,13 +20,7 @@ customEmittter.emit()
 
 console.log('What is my name? '); 
 
-const server = https.createServer('connect', ()=>{
-    console.log('This is the HTTPS');
-    
-})
-
-server.listen('connect')
-
+const server = https.createServer()
 
 const start = async ()=>{
     try {
