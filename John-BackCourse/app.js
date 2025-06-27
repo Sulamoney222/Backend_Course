@@ -25,7 +25,7 @@ const server = https.createServer('connect', ()=>{
     
 })
 
-server
+server.
 
 
 const start = async ()=>{
