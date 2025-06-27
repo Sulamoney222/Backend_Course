@@ -13,7 +13,7 @@ customEmittter.on('process', ()=>{
     console.log('Hello This is new Events');
     
 })
-customEmittter
+customEmittter.
 
 customEmittter.emit()
 
