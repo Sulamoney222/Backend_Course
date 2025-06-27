@@ -1,12 +1,17 @@
 
 const {readFile,writeFile} = require('fs')
 const util = require('util')
+//events
+const Emmiter = require('events')
 
 const readFilePromise = util.promisify(readFile)
 const writeFilePromise = util.promisify(writeFile)
 
+const 
 
-console.log('What is my name? ');
+
+
+console.log('What is my name? '); 
 
 
 const start = async ()=>{
