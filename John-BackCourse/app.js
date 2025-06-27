@@ -25,6 +25,8 @@ const server = https.createServer('connect', ()=>{
     
 })
 
+server
+
 
 const start = async ()=>{
     try {
