@@ -1,4 +1,4 @@
-
+const https = require('http')
 const {readFile,writeFile} = require('fs')
 const util = require('util')
 //events
@@ -13,7 +13,6 @@ customEmittter.on('process', ()=>{
     console.log('Hello This is new Events');
     
 })
-customEmittter.
 
 customEmittter.emit()
 
