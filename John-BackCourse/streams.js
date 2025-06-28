@@ -15,3 +15,4 @@ stream.on('data', (result)=>{
     console.log(result.BYTES_PER_ELEMENT);
     
 })
+stream.on('error',())
