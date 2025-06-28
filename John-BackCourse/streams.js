@@ -12,6 +12,6 @@ const {createReadStream} = require('fs')
 const stream = createReadStream('./texts/big.txt')
 
 stream.on('data', (result)=>{
-    console.log(result);
+    console.log(result.BYTES_PER_ELEMENT);
     
 })
