@@ -31,7 +31,7 @@ server.on('request', (req, res) => {
 
     file.on('open', () => {
         file.pipe(res); // <-- Pipe the file stream to the response object
-    });
+    });  
 
     file.on('error', (err) => {
         res.statusCode = 500;
