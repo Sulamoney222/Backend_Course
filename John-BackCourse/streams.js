@@ -28,7 +28,7 @@ const server = https.createServer()
 
 server.on('request', (req,res)=>{
   
-    const file = fs.createReadStream('./')
+    const file = fs.createReadStream('./texts/big.txt')
     file.on('open', ()=>{
         file.pipe()
     })
