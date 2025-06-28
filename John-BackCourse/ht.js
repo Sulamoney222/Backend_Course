@@ -16,8 +16,9 @@ const server = http.createServer((req,res)=>{
         res.write(stylepage)
         res.end()
     }
-    
-    console.log(req.url);
+     res.writeHead(200, {'content-type': 'text/html'})
+        res.write(`<h1>Page not found!</h1>`)
+        res.end()  
     
     
     
