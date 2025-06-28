@@ -2,8 +2,10 @@ const http = require('http')
 
 const server = http.createServer((req,res)=>{
     res.writeHead(200,{'content-type': 'text/html'})
-    res.end(`<h1 style= 'color:blue'>Hello, how are you doing? </h1>`)
-
+    
+  if(req.url = '/'){
+res.end(`<h1 style= 'color:blue'>Hello, how are you doing? </h1>`)
+  }
 })
 
 server.listen(5000,()=>{
