@@ -8,13 +8,22 @@ for (let index = 0; index < 10000; index++) {
         './texts/s.txt', `New file ${index}`, {flag:'a'}
     )
     
+    
 }
 
 const server = http.createServer()
 
 server.on('request', (req,res)=>{
    const file = fs.createReadStream('./texts/s.txt')
-   file.pipe(res)
+   
+  
+   file.on ('open', ()=>{
+    file.pipe(res)
+   })
+
+   file.on('error', (err)=>{
+    res.end('ERROR')
+   })
    
 })
 
