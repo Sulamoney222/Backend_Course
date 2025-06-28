@@ -11,9 +11,12 @@ const server = http.createServer((req,res)=>{
         res.write(homepage)
         res.end()       
     }
-    else if(req.url==='/'){
-        res.writeHead
+    else if(req.url==='/style.css'){
+        res.writeHead(201, {'content-type': 'text/css'})
+        res.write(stylepage)
+        res.end()
     }
+    
     
 })
 
