@@ -11,32 +11,36 @@ const https = require('http')
     
 // }
 
-const stream = createReadStream('./texts/big.txt')
+// const stream = createReadStream('./texts/big.txt')
 
-stream.on('data', (result)=>{
-    console.log(result);
+// stream.on('data', (result)=>{
+//     console.log(result);
     
-})
-stream.on('error',(err)=>{
-    console.log(err);
+// })
+// stream.on('error',(err)=>{
+//     console.log(err);
     
-})
+// })
 
 
 
-const server = https.createServer()
+const server = https.createServer();
 
-server.on('request', (req,res)=>{
-  
-    const file = fs.createReadStream('./texts/big.txt')
-    file.on('open', ()=>{
-        file.pipe()
-    })
-    file.on('error', (err)=>{
-        res.end(err)
-    })
-    
-})
+server.on('request', (req, res) => {
+    const file = fs.createReadStream('./texts/big.txt');
+
+    file.on('open', () => {
+        file.pipe(res); // <-- Pipe the file stream to the response object
+    });
+
+    file.on('error', (err) => {
+        res.statusCode = 500;
+        res.end('File read error: ' + err.message);
+    });
+});
+
+server.listen(5000, () => {
+    console.log('Server listening on port 5000');
+});
 
 
-server.listen(5000)
