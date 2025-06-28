@@ -25,3 +25,5 @@ const products = [
         Skill: 'Copywighter'
     }
 ]
+
+module.exports.products = products
