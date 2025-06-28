@@ -17,6 +17,9 @@ const server = http.createServer((req,res)=>{
         res.end()
     }
     
+    console.log(req.url);
+    
+    
     
 })
 
