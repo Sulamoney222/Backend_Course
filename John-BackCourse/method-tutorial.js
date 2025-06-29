@@ -12,7 +12,8 @@ app.get('/',(req,res)=>{
 })
 
 app.post('/login', (req,res)=>{
-   res.send(req.body.name)
+   const {name} = req.body
+   
     
 }) 
 
