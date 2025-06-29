@@ -28,6 +28,8 @@ const PORT = 5000 || process.env
   app.get('/api/v/query', (req,res)=>{
    // console.log(req.query);
    // res.status(201).send('Hello World how are you')
+   console.log(req.user);
+   
     
     
   })

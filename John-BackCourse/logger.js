@@ -10,6 +10,8 @@ const logger = (req,res, next)=>{
    if(user === 'Jack'){
     req.user = {name:'Jack', id:22}
     next()
+   }else{
+    res.status(404).send('Authorisez')
    }
    
    
