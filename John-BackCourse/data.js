@@ -27,7 +27,8 @@ const products = [
 ]
 
 const people= [
-    
+    {id:1, name:'John'},
+     {id:1, name:'John'}
 ]
 
 module.exports.products = products
