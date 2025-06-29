@@ -12,6 +12,8 @@ app.get('/',(req,res)=>{
 
 app.post('/login', (req,res)=>{
     res.send('Hello, how are you doing?')
+    console.log(req.body);
+    
 }) 
 
 app.listen(5000, ()=>{
