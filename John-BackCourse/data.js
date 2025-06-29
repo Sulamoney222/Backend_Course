@@ -26,4 +26,8 @@ const products = [
     }
 ]
 
+const people= [
+    
+]
+
 module.exports.products = products
