@@ -5,11 +5,8 @@ const logger = (req,res, next)=>{
    const method = req.method
    const date = new Date().getFullYear()
    console.log(url, method,date);
-
-   const{name} = req.query
-   if(name === 'Jack'){
-    res.send(name)
-   }
+   
+   const {user} = req.query
    
    
 }
