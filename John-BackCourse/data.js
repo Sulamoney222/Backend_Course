@@ -28,6 +28,7 @@ const products = [
 
 const people= [
     {id:1, name:'John'},
+    {id:2, name:'Peter'},
      {id:1, name:'John'}
 ]
 
