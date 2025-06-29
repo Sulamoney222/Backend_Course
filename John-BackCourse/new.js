@@ -16,12 +16,15 @@ const PORT = 5000 || process.env
     const {productID} = req.params
 
    const singleProduct = products.find((product)=> product.id === Number(productID))
- if(!singleProduct){
+   if(!singleProduct){
     return res.status(404).send('Page does not exists')
- }
-  return res.status(200).json(singleProduct)
-   
-   
+   }
+  })
+
+  app.get('/api/v/query', (req,res)=>{
+    console.log(req.query);
+    res.status(201).send('Hello World how are you')
+    
   })
 
 app.listen(PORT, ()=>{
