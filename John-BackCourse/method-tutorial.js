@@ -3,6 +3,7 @@ const app = express()
 
 //middleware
 app.use(express.static('./methods-public'))
+app.use(express.urlencoded({extended: false}))
 
 
 app.get('/',(req,res)=>{
@@ -11,8 +12,7 @@ app.get('/',(req,res)=>{
 })
 
 app.post('/login', (req,res)=>{
-    res.send('Hello, how are you doing?')
-    console.log(req.body);
+   res.send(req.body.name)
     
 }) 
 
