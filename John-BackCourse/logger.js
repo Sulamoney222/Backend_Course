@@ -7,6 +7,10 @@ const logger = (req,res, next)=>{
    console.log(url, method,date);
    
    const {user} = req.query
+   if(user === 'Jack'){
+    req.user = {name:'Jack', id:22}
+    next()
+   }
    
    
 }
