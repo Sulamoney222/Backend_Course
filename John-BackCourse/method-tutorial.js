@@ -16,7 +16,7 @@ app.post('/login', (req,res)=>{
    if(name){
    return res.status(200).send(`Welcome to our page ${name}`)
    }else{
-     return res.status(400).send(`Pls input name!`)
+     return res.status(400).send(`Pls input name, blank page!`)
    }
     
 }) 
