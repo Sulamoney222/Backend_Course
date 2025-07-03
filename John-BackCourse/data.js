@@ -31,7 +31,7 @@ const people= [
     {id:2, name:'Peter'},
     {id:3, name:'Michael'},
     {id:4, name:'Anna'},
-    {id:5, name:'Emma'}
+    {id:5, name:'Emma'},
 ]
 
 module.exports = {products, people}
